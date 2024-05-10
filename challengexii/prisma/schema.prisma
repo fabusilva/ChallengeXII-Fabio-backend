@@ -8,7 +8,7 @@ datasource db {
 }
 
 model User{
-  id BigInt @id @default(autoincrement())
+  id Int @id @default(autoincrement())
   fistName String
   lastName String
   email String
@@ -16,5 +16,5 @@ model User{
   city String
   referralCode String
   typeCar String
-  @@map("user")
+  @@map("user_table")
 }

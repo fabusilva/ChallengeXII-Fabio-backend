@@ -13,9 +13,10 @@ import { CatalogController } from './catalog/catalog.controller';
 import { CatalogService } from './catalog/catalog.service';
 import { CatalogModule } from './catalog/catalog.module';
 import { CatalogRepository } from './catalog/repository/catalog.repository';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [UserModule, CountryModule, CityModule, CatalogModule],
+  imports: [UserModule, CountryModule, CityModule, CatalogModule, ConfigModule.forRoot()],
   controllers: [AppController, CountryController, CityController, CatalogController],
   providers: [AppService, PrismaService, CountryService, CityService, CatalogService,CatalogRepository],
 })

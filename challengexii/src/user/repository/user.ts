@@ -9,4 +9,8 @@ export class UserRepository {
   create(userDTO: UserDTO) {
     return this.prisma.user.create({ data: userDTO });
   }
+
+  get() {
+    return this.prisma.user.findMany();
+  }
 }

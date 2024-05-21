@@ -9,4 +9,8 @@ export class UserService {
   create(userDTO: UserDTO) {
     return this.repository.create(userDTO);
   }
+
+  get() {
+    return this.repository.get();
+  }
 }
